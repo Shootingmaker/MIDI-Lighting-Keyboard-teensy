@@ -1,6 +1,7 @@
 # MIDI-Lighting-Keyboard-teensy
 
 [Library needs]
+
 MIDI
 https://github.com/FortySevenEffects/arduino_midi_library
 
@@ -22,6 +23,7 @@ Faster with LTO
 Change it
 [midi_Settings.h]  
 -> static const unsigned SysExMaxSize = 50000;
+
 -> static const bool UseRunningStatus = true;
 
 MIDIcontoroller
