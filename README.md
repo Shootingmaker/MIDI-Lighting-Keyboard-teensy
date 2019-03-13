@@ -1,36 +1,38 @@
 # MIDI-Lighting-Keyboard-teensy
 
-//[Library needs]
-//MIDI
-// https://github.com/FortySevenEffects/arduino_midi_library
-//MIDIcontoroller
-// https://github.com/joshnishikawa/MIDIcontroller
-//Teensyduino
-// https://www.pjrc.com/teensy/teensyduino.html
+[Library needs]
+MIDI
+https://github.com/FortySevenEffects/arduino_midi_library
 
-//[Setting] 
-//board Teensy3.5
-//tool -> USB Type -> TeensyMIDI 
-//CPU:120Mhz
-//Faster with LTO
+MIDIcontoroller
+https://github.com/joshnishikawa/MIDIcontroller
 
-//[Edit some libraly]
+Teensyduino
+https://www.pjrc.com/teensy/teensyduino.html
 
-//"MIDI.h" with MIDIcontoroller with TeensyMIDI
-// Change it
-// [midi_Settings.h]  
-// -> static const unsigned SysExMaxSize = 50000;
-// -> static const bool UseRunningStatus = true;
+[Setting] 
+board Teensy3.5
+tool -> USB Type -> TeensyMIDI 
+CPU:120Mhz
+Faster with LTO
 
-// MIDIcontoroller
-// Change it
-// [MIDIbutton.h]   - >#include "Flicker.h  =>  #include "Flicker/Flicker.h"
+[Edit some libraly]
 
-// [Memo]
-// How to Using USB MIDI
-// https://www.pjrc.com/teensy/td_midi.html
+"MIDI.h" with MIDIcontoroller with TeensyMIDI
+Change it
+[midi_Settings.h]  
+-> static const unsigned SysExMaxSize = 50000;
+-> static const bool UseRunningStatus = true;
 
-//[to LED(APA102) Wireing]
-// 5V & GND
-// MOSI is  11
-// CLK  is  13
+MIDIcontoroller
+Change it
+ [MIDIbutton.h]   - >#include "Flicker.h  =>  #include "Flicker/Flicker.h"
+
+[Memo]
+How to Using USB MIDI
+https://www.pjrc.com/teensy/td_midi.html
+
+[to LED(APA102) Wireing]
+ 5V & GND
+ MOSI is  11
+ CLK  is  13
