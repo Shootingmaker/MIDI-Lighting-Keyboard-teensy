@@ -25,19 +25,29 @@ Faster with LTO
 [Edit some libraly]
 
 "MIDI.h" with MIDIcontoroller with TeensyMIDI
+
 Change it
+
 [midi_Settings.h]  
+
 -> static const unsigned SysExMaxSize = 50000;
+
+
 
 -> static const bool UseRunningStatus = true;
 
+
 MIDIcontoroller
+
 Change it
+
  [MIDIbutton.h]   - >#include "Flicker.h  =>  #include "Flicker/Flicker.h"
+
 
 [Memo]
 How to Using USB MIDI
 https://www.pjrc.com/teensy/td_midi.html
+
 
 [to LED(APA102) Wireing]
  5V & GND
