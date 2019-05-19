@@ -13,11 +13,11 @@ https://www.pjrc.com/teensy/teensyduino.html
 
 [Setting] 
 
-board Teensy3.5
+board Teensy3.2
 
 tool -> USB Type -> TeensyMIDI 
 
-CPU:120Mhz
+CPU:72Mhz
 
 Faster with LTO
 
