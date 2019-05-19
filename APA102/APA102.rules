@@ -1,0 +1,100 @@
+
+(rules PCB APA102
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 204)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 100.0)
+      (against_preferred_direction_trace_costs 2.1)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.9)
+    )
+  )
+  (rule
+    (width 300.0)
+    (clear 250.2)
+    (clear 150.0 (type smd_to_turn_gap))
+    (clear 500.2 (type default_Power))
+    (clear 62.6 (type smd_smd))
+    (clear 500.2 (type smd_Power))
+    (clear 500.2 (type "kicad_default"_Power))
+    (clear 500.2 (type Power_Power))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_800:400_um-Power" "Via[0-1]_800:400_um" Power
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (via_rule
+    Power "Via[0-1]_800:400_um-Power"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 300.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    "Net-(D1-Pad2)" "Net-(D1-Pad3)" "Net-(D1-Pad4)" "Net-(D1-Pad5)" "Net-(D2-Pad3)" "Net-(D2-Pad2)" "Net-(D3-Pad2)" "Net-(D3-Pad3)"
+    "Net-(D4-Pad3)" "Net-(D4-Pad2)" "Net-(D5-Pad2)" "Net-(D5-Pad3)" "Net-(D6-Pad3)" "Net-(D6-Pad2)" "Net-(D7-Pad2)" "Net-(D7-Pad3)"
+    "Net-(D8-Pad3)" "Net-(D8-Pad2)" "Net-(D10-Pad5)" "Net-(D10-Pad4)" "Net-(D10-Pad3)" "Net-(D10-Pad2)" "Net-(D11-Pad2)" "Net-(D11-Pad3)"
+    "Net-(D12-Pad3)" "Net-(D12-Pad2)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 300.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class Power
+    +5V GND
+    (clearance_class Power)
+    (via_rule Power)
+    (rule
+      (width 1000.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
