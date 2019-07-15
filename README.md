@@ -1,6 +1,7 @@
 # MIDI-Lighting-Keyboard-teensy
+This repository for like this video.
+https://www.youtube.com/watch?v=D2VWIVyrJ5M&feature=youtu.be
 
-[![](https://img.youtube.com/vi/D2VWIVyrJ5M&feature=youtu.be/0.jpg)](https://www.youtube.com/watch?v=D2VWIVyrJ5M&feature=youtu.be)
 
 [Library needs]
 
