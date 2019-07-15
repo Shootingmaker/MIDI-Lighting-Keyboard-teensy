@@ -1,4 +1,5 @@
 # MIDI-Lighting-Keyboard-teensy
+[![](https://img.youtube.com/vi/D2VWIVyrJ5M&feature=youtu.be/0.jpg)](https://www.youtube.com/watch?v=D2VWIVyrJ5M&feature=youtu.be)
 
 [Library needs]
 
